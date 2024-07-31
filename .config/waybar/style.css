@@ -1,0 +1,55 @@
+@import url('file:///home/amolinae/.cache/wal/colors-waybar.css');
+
+* {
+    font-family: Inconsolata Nerd Font;
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 14px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+window#waybar {
+    background: @color0;
+    border: 2.5px solid @color1;
+    border-radius: 10px;
+}
+
+#workspaces button {
+    color: @color1;
+}
+
+#workspaces button.active {
+    color: white;
+    font-weight: normal;
+}
+
+#window {
+    margin-right: 8px;
+    margin-left: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#battery.warning {
+    color: white;
+    background-color: transparent;
+}
+
+#battery.critical {
+    color: white;
+    background-color: transparent;
+}
+
+#backlight,
+#battery,
+#clock,
+#cpu,
+#memory,
+#network,
+#wireplumber {
+    padding: 2px 8px 2px 8px;
+    color: white;
+    border-radius: 14px;
+}
+
