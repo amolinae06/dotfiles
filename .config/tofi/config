@@ -1,0 +1,24 @@
+include = /home/amolinae/.cache/wal/tofi-colors
+
+font = "Inconsolata"
+font-size = 11
+hint-font = true
+text-color = #FFFFFF
+prompt-text = ""
+anchor = center
+width = 20%
+height = 20%
+alpha = 10
+horizontal = false
+outline-width = 0
+border-width = 2
+corner-radius = 12
+min-input-width = 120
+result-spacing = 15
+padding-top = 8
+padding-bottom = 8
+padding-left = 8
+padding-right = 8
+multi-instance = false
+auto-accept-single = false
+require-match = true
