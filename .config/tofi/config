@@ -8,7 +8,6 @@ prompt-text = ""
 anchor = center
 width = 20%
 height = 20%
-alpha = 10
 horizontal = false
 outline-width = 0
 border-width = 2
