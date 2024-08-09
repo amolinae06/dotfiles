@@ -1,41 +1,145 @@
 {
-    "layer": "top",
-    "margin-top": 8,
-    "margin-left": 10,
-    "margin-right": 10,
-    "margin-bottom": 0,
-    "layer": "bottom",
+	"height": 30,
+	"margin-top": 4,
+    "margin-left": 4,
+    "margin-right": 4,
+    "margin-bottom": 4,
+	"layer": "top",
     "position": "top",
     "spacing": 0,
-    "modules-left": ["hyprland/workspaces", "hyprland/window"],
-    "modules-center": ["clock"],
+    "modules-left": [
+	   "custom/artix", 
+	   "hyprland/workspaces", 
+	   "hyprland/window"
+    ],
+    "modules-center": [ 
+		"clock" 
+	],
     "modules-right": [
-	    "cpu",
-            "memory",
-	    "backlight", 
-	    "battery", 
-	    "wireplumber", 
-	    "network" 
+	   "cpu",
+        "memory",
+	   "backlight", 
+	   "battery", 
+	   "wireplumber", 
+	   "network",
+		"tray" 
     ],
     
-    // Modules
+    // Modules \\
+    "custom/artix": {
+	"format": "  ",
+	"tooltip": "false",
+	"on-click": "sh ~/.local/bin/powermenu"
+    },
     "hyprland/window": {
-        "max-length": 25,
+        "max-length": 40,
 	"rewrite": {
-	     "(.*) - Thorium": "Thorium",
-	     "(.*) — Mozilla Firefox": "Mozilla Firefox",
-	     "(.*) — Librewolf": "Librewolf",
-	     "foot": "Terminal"
+	    "(.*) - Thorium": "Thorium",
+	    "(.*) — Mozilla Firefox": "Firefox",
+	    "(.*) — Librewolf": "Librewolf",
+		"(.*) - VSCodium": "VSCodium",
+	    "foot": "Terminal"
 	}
     },
     "hyprland/workspaces": {
          "persistent-workspaces": {
              "1": [],
-	     "2": [],
-	     "3": [],
-	     "4": []
-	 },
-	 "sort-by-number": true
+	        "2": [],
+	        "3": [],
+	        "4": []
+	},
+	"sort-by-number": true
+    },
+    "clock": {
+	"interval": 60,
+	"tooltip": true,
+	"format": "󰥔  {:%H:%M}",
+	"tooltip-format": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+	"interval": 10,
+	"format": "{}% ",
+	"max-length": 10
+    },
+    "backlight": {
+	"device": "intel_backlight",
+	"format": "{percent}% {icon}",
+	"format-icons": ["󰃞", "󰃠"]
+    },
+    "battery": {
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󰠠",
+	"format-icons": ["", "", "", "", ""],
+	"states": {
+                "warning": 20,
+		"critical": 10
+	}
+    },
+    "memory": {
+	"interval": 30,
+	"format": "{}% ",
+	"max-length": 10
+    },
+    "wireplumber": {
+	"format": "{volume}% {icon}",
+	"format-muted": "",
+	"format-icons": [
+		"", 
+		"", 
+		""
+	]
+    },
+    "network": {{
+	"height": 30,
+	"margin-top": 4,
+    "margin-left": 4,
+    "margin-right": 4,
+    "margin-bottom": 4,
+	"layer": "top",
+    "position": "top",
+    "spacing": 0,
+    "modules-left": [
+	   "custom/artix", 
+	   "hyprland/workspaces", 
+	   "hyprland/window"
+    ],
+    "modules-center": [ 
+		"clock" 
+	],
+    "modules-right": [
+	   "cpu",
+        "memory",
+	   "backlight", 
+	   "battery", 
+	   "wireplumber", 
+	   "network",
+		"tray" 
+    ],
+    
+    // Modules \\
+    "custom/artix": {
+	"format": "  ",
+	"tooltip": "false",
+	"on-click": "sh ~/.local/bin/powermenu"
+    },
+    "hyprland/window": {
+        "max-length": 40,
+	"rewrite": {
+	    "(.*) - Thorium": "Thorium",
+	    "(.*) — Mozilla Firefox": "Firefox",
+	    "(.*) — Librewolf": "Librewolf",
+		"(.*) - VSCodium": "VSCodium",
+	    "foot": "Terminal"
+	}
+    },
+    "hyprland/workspaces": {
+         "persistent-workspaces": {
+             "1": [],
+	        "2": [],
+	        "3": [],
+	        "4": []
+	},
+	"sort-by-number": true
     },
     "clock": {
 	"interval": 60,
@@ -78,7 +182,7 @@
     },
     "network": {
 	"interface": "wlan0",
-	"format-wifi": "{signalStrength}% {icon}",
+	"format-wifi": "{essid} ({signalStrength}%) {icon}",
 	"format-ethernet": "",
 	"format-disconnected": "",
 	"format-icons": [
@@ -89,5 +193,27 @@
             "󰤨"
           ],
 	"tooltip-format": "{essid}"
-    }
+    },
+	"tray": {
+		"icon-size": 18,
+		"spacing": 10
+	}
+}
+	"interface": "wlan0",
+	"format-wifi": "{essid} ({signalStrength}%) {icon}",
+	"format-ethernet": "",
+	"format-disconnected": "",
+	"format-icons": [
+            "󰤯",
+            "󰤟",
+            "󰤢",
+            "󰤥",
+            "󰤨"
+          ],
+	"tooltip-format": "{essid}"
+    },
+	"tray": {
+		"icon-size": 18,
+		"spacing": 10
+	}
 }
