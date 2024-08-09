@@ -1,55 +1,57 @@
 @import url('file:///home/amolinae/.cache/wal/colors-waybar.css');
 
 * {
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#waybar {
     font-family: Inconsolata Nerd Font;
     font-size: 14px;
     font-weight: bold;
-    min-height: 14px;
-    margin-left: 2px;
-    margin-right: 2px;
-}
-
-window#waybar {
+    color: white;
     background: @color0;
-    border: 2.5px solid @color1;
-    border-radius: 10px;
-}
-
-#workspaces button {
-    color: @color1;
-}
-
-#workspaces button.active {
-    color: white;
-    font-weight: normal;
-}
-
-#window {
-    margin-right: 8px;
-    margin-left: 8px;
-    padding-left: 8px;
-    padding-right: 8px;
-}
-
-#battery.warning {
-    color: white;
-    background-color: transparent;
-}
-
-#battery.critical {
-    color: white;
-    background-color: transparent;
+    border: solid 2.5px @color1;
 }
 
 #backlight,
 #battery,
 #clock,
 #cpu,
+#custom-artix,
 #memory,
 #network,
-#wireplumber {
-    padding: 2px 8px 2px 8px;
-    color: white;
-    border-radius: 14px;
+#tray,
+#window,
+#wireplumber,
+#workspaces {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
+/* INDIVIDUAL MODULES */
+#custom-arch {
+    padding: 2px;
+}
+
+#workspaces button {
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: white;
+}
+
+#workspaces button.active {
+    color: white;
+    background-color: @color1;
+}
+
+#workspaces button:hover {
+    transition: none;
+    color: @color1;
+}
