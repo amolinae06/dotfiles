@@ -27,6 +27,7 @@ alias yay='paru'
 alias vim='nvim'
 alias docker='podman'
 alias ls='ls -lah'
+alias codium='codium --ozone-platform=wayland'
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
