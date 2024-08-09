@@ -7,9 +7,9 @@ cfgfile="${HOME}/.config/mako/config"
 # Associative array, color name -> color code.
 declare -A colors
 colors=(
-    ["background-color"]="$background"
+    ["background-color"]="$color0"
     ["text-color"]="$foreground"
-    ["border-color"]="$color13"
+    ["border-color"]="$color1"
 )
 
 for color_name in "${!colors[@]}"; do
