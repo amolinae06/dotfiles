@@ -1,10 +1,10 @@
 {
-	"height": 30,
-	"margin-top": 4,
+    "height": 30,
+    "margin-top": 4,
     "margin-left": 4,
     "margin-right": 4,
     "margin-bottom": 4,
-	"layer": "top",
+    "layer": "top",
     "position": "top",
     "spacing": 0,
     "modules-left": [
@@ -17,17 +17,18 @@
 	],
     "modules-right": [
 	   "cpu",
-        "memory",
+            "memory",
 	   "backlight", 
-	   "battery", 
-	   "wireplumber", 
 	   "network",
-		"tray" 
+	   "wireplumber",
+	   "power-profiles-daemon",
+	   "battery",
+	   "tray" 
     ],
     
     // Modules \\
     "custom/artix": {
-	"format": "  ",
+	"format": "",
 	"tooltip": "false",
 	"on-click": "sh ~/.local/bin/powermenu"
     },
@@ -75,95 +76,15 @@
 		"critical": 10
 	}
     },
-    "memory": {
-	"interval": 30,
-	"format": "{}% ",
-	"max-length": 10
-    },
-    "wireplumber": {
-	"format": "{volume}% {icon}",
-	"format-muted": "",
-	"format-icons": [
-		"", 
-		"", 
-		""
-	]
-    },
-    "network": {{
-	"height": 30,
-	"margin-top": 4,
-    "margin-left": 4,
-    "margin-right": 4,
-    "margin-bottom": 4,
-	"layer": "top",
-    "position": "top",
-    "spacing": 0,
-    "modules-left": [
-	   "custom/artix", 
-	   "hyprland/workspaces", 
-	   "hyprland/window"
-    ],
-    "modules-center": [ 
-		"clock" 
-	],
-    "modules-right": [
-	   "cpu",
-        "memory",
-	   "backlight", 
-	   "battery", 
-	   "wireplumber", 
-	   "network",
-		"tray" 
-    ],
-    
-    // Modules \\
-    "custom/artix": {
-	"format": "  ",
-	"tooltip": "false",
-	"on-click": "sh ~/.local/bin/powermenu"
-    },
-    "hyprland/window": {
-        "max-length": 40,
-	"rewrite": {
-	    "(.*) - Thorium": "Thorium",
-	    "(.*) — Mozilla Firefox": "Firefox",
-	    "(.*) — Librewolf": "Librewolf",
-		"(.*) - VSCodium": "VSCodium",
-	    "foot": "Terminal"
-	}
-    },
-    "hyprland/workspaces": {
-         "persistent-workspaces": {
-             "1": [],
-	        "2": [],
-	        "3": [],
-	        "4": []
-	},
-	"sort-by-number": true
-    },
-    "clock": {
-	"interval": 60,
+    "power-profiles-daemon": {
+        "format": "Profile: {icon}",
+	"tooltip-format": "Power profile: {profile}",
 	"tooltip": true,
-	"format": "󰥔  {:%H:%M}",
-	"tooltip-format": "{:%Y-%m-%d}"
-    },
-    "cpu": {
-	"interval": 10,
-	"format": "{}% ",
-	"max-length": 10
-    },
-    "backlight": {
-	"device": "intel_backlight",
-	"format": "{percent}% {icon}",
-	"format-icons": ["󰃞", "󰃠"]
-    },
-    "battery": {
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󰠠",
-	"format-icons": ["", "", "", "", ""],
-	"states": {
-                "warning": 20,
-		"critical": 10
+	"format-icons": {
+		"default": "",
+                "performance": "",
+                "balanced": "",
+                "power-saver": ""
 	}
     },
     "memory": {
@@ -173,7 +94,7 @@
     },
     "wireplumber": {
 	"format": "{volume}% {icon}",
-	"format-muted": "",
+	"format-muted": "Muted ",
 	"format-icons": [
 		"", 
 		"", 
@@ -183,26 +104,8 @@
     "network": {
 	"interface": "wlan0",
 	"format-wifi": "{essid} ({signalStrength}%) {icon}",
-	"format-ethernet": "",
-	"format-disconnected": "",
-	"format-icons": [
-            "󰤯",
-            "󰤟",
-            "󰤢",
-            "󰤥",
-            "󰤨"
-          ],
-	"tooltip-format": "{essid}"
-    },
-	"tray": {
-		"icon-size": 18,
-		"spacing": 10
-	}
-}
-	"interface": "wlan0",
-	"format-wifi": "{essid} ({signalStrength}%) {icon}",
-	"format-ethernet": "",
-	"format-disconnected": "",
+	"format-ethernet": "Connected ",
+	"format-disconnected": "Disconnected ",
 	"format-icons": [
             "󰤯",
             "󰤟",
