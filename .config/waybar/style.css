@@ -24,6 +24,7 @@
 #custom-artix,
 #memory,
 #network,
+#power-profiles-daemon,
 #tray,
 #window,
 #wireplumber,
@@ -34,7 +35,7 @@
 
 /* INDIVIDUAL MODULES */
 #custom-arch {
-    padding: 2px;
+    padding: 4px;
 }
 
 #workspaces button {
