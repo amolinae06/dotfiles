@@ -1,111 +1,90 @@
 {
-    "height": 30,
-    "margin-top": 4,
-    "margin-left": 4,
-    "margin-right": 4,
-    "margin-bottom": 4,
+    "height": 24,
     "layer": "top",
     "position": "top",
-    "spacing": 0,
     "modules-left": [
-	   "custom/artix", 
-	   "hyprland/workspaces", 
-	   "hyprland/window"
+	  "hyprland/workspaces", 
+	  "custom/makima",
+	  "hyprland/window"
     ],
-    "modules-center": [ 
-		"clock" 
-	],
+    "modules-center": [],
     "modules-right": [
-	   "cpu",
-            "memory",
-	   "backlight", 
-	   "network",
-	   "wireplumber",
-	   "power-profiles-daemon",
-	   "battery",
-	   "tray" 
+	  "backlight", 
+	  "network",
+	  "wireplumber",
+	  "battery",
+	  "clock",
+	  "tray" 
     ],
     
-    // Modules \\
-    "custom/artix": {
-	"format": "",
-	"tooltip": "false",
-	"on-click": "sh ~/.local/bin/powermenu"
-    },
+   // MODULES \\ 
     "hyprland/window": {
-        "max-length": 40,
+        "max-length": 150,
+	"format": "{}",
 	"rewrite": {
-	    "(.*) - Thorium": "Thorium",
-	    "(.*) — Mozilla Firefox": "Firefox",
-	    "(.*) — Librewolf": "Librewolf",
-		"(.*) - VSCodium": "VSCodium",
-	    "foot": "Terminal"
+	   "(.*) - Thorium": "Thorium",
+	   "(.*) — Mozilla Firefox": "Firefox",
+	   "(.*) — Librewolf": "Librewolf",
+	   "(.*) - VSCodium": "VSCodium",
+	   "foot": "Terminal"
 	}
     },
     "hyprland/workspaces": {
          "persistent-workspaces": {
-             "1": [],
-	        "2": [],
-	        "3": [],
-	        "4": []
+                "1": [],
+	       "2": [],
+	       "3": [],
+	       "4": []
 	},
 	"sort-by-number": true
     },
-    "clock": {
-	"interval": 60,
-	"tooltip": true,
-	"format": "󰥔  {:%H:%M}",
-	"tooltip-format": "{:%Y-%m-%d}"
+    "custom/makima": {
+    	"format": "マキマ",
+	"tooltip": false,
+	"max-length": 24
     },
-    "cpu": {
-	"interval": 10,
-	"format": "{}% ",
-	"max-length": 10
+    "clock": {
+	"interval": 30,
+	"format": "{:%a %b%e  %R}",
+	"tooltip": false
     },
     "backlight": {
 	"device": "intel_backlight",
-	"format": "{percent}% {icon}",
-	"format-icons": ["󰃞", "󰃠"]
+	"format": "{icon}  {percent}%",
+	"format-icons": ["󰃞", "󰃠"],
+	"tooltip": false
     },
     "battery": {
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% 󰠠",
-	"format-icons": ["", "", "", "", ""],
+        "format": "{icon}  {capacity}%",
+        "format-charging": "󱐋  {capacity}%",
+	"format-icons": [
+		"", 
+		"", 
+		"", 
+		"", 
+		""
+		],
 	"states": {
                 "warning": 20,
 		"critical": 10
-	}
-    },
-    "power-profiles-daemon": {
-        "format": "Profile: {icon}",
-	"tooltip-format": "Power profile: {profile}",
-	"tooltip": true,
-	"format-icons": {
-		"default": "",
-                "performance": "",
-                "balanced": "",
-                "power-saver": ""
-	}
-    },
-    "memory": {
-	"interval": 30,
-	"format": "{}% ",
-	"max-length": 10
+	},
+	"tooltip": false
     },
     "wireplumber": {
-	"format": "{volume}% {icon}",
-	"format-muted": "Muted ",
+	"format": "{icon}  {volume}%",
+	"format-muted": "  Muted",
 	"format-icons": [
 		"", 
 		"", 
 		""
-	]
+	],
+	"tooltip": false
     },
     "network": {
 	"interface": "wlan0",
-	"format-wifi": "{essid} ({signalStrength}%) {icon}",
-	"format-ethernet": "Connected ",
-	"format-disconnected": "Disconnected ",
+	"format-wifi": "{icon}  Connected",
+	"format-ethernet": "  Connected",
+	"format-disconnected": "󰤮  Disconnected",
 	"format-icons": [
             "󰤯",
             "󰤟",
@@ -113,10 +92,11 @@
             "󰤥",
             "󰤨"
           ],
-	"tooltip-format": "{essid}"
+	"tooltip": false
     },
 	"tray": {
 		"icon-size": 18,
-		"spacing": 10
+		"spacing": 10,
+		"tooltip": false
 	}
 }
