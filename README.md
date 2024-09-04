@@ -3,7 +3,7 @@
 - Waybar
 - Foot
 - Mako
-- Zathura (soon)
+- Zathura
 - NeoVim (soon)
 - lf (soon)
 - Tofi
