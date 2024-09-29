@@ -1,4 +1,4 @@
-# AMOLINAE'S DOTFILES
+# λMOLINAE'S DOTFILES
 Operating System: Artix Linux (OpenRC)
 
 - hyprland
