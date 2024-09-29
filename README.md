@@ -2,6 +2,10 @@
 ## SCREENSHOT
 ![scrsht](https://i.tohru.party/OvrtJQvgmsyNziSrWSnoEghFdJIQ.png)
 
+![scrsht](https://i.tohru.party/WZkZtSXahjvrksIDoDznTgdxkTqXXM.png)
+
+![scrsht](https://i.tohru.party/hInSfxGEJJJWRuIOZMjpDDMMfdLsH.png)
+
 ## Featured Software
 - hyprland
 - waybar
