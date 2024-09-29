@@ -64,11 +64,15 @@ window#waybar.empty {
 
 #network,
 #backlight, 
-#wireplumber, 
+#wireplumber,
 #battery {
     padding: 0px 15px 0px 15px;
 }
-    
+
+#mpris {
+    /*background-color: @color1;*/
+    padding: 0px 10px 0px 10px;
+}
 
 #clock {
 	margin: 0px 15px 0px 15px;
@@ -80,9 +84,9 @@ window#waybar.empty {
 }
 
 #battery.critical {
-   color: #ff5555;
+   color: @color1;
 }
 
 #network.disconnected {
-    color: #ff5555;
+    color: @color1;
 }
