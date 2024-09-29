@@ -1,6 +1,8 @@
 # λMOLINAE'S DOTFILES
-Operating System: Artix Linux (OpenRC)
+## SCREENSHOT
+![scrsht](https://i.tohru.party/OvrtJQvgmsyNziSrWSnoEghFdJIQ.png)
 
+## Featured Software
 - hyprland
 - waybar
 - foot
@@ -11,8 +13,8 @@ Operating System: Artix Linux (OpenRC)
 - tofi
 - fastfetch
 
-#### Required Packages
-CORE PACKAGES
+## Required Packages
+##### CORE PACKAGES
 ```
 hyprland hypridle
 hyprlock swaybg
@@ -21,14 +23,14 @@ foot neovim
 opendoas busybox
 ```
 
-Audio
+##### Audio
 ```
 pipewire wireplumber
 pipewire-pulse pipewire-alsa
 pipewire-jack
 ```
 
-Other stuff
+##### Other stuff
 ```
 librewolf brightnessctl greetd
 greetd-tuigreet lf mako
@@ -37,7 +39,7 @@ gnome-keyring grim slurp
 tlp kanshi playerctl
 ```
 
-FONTS
+##### FONTS
 ```
 ttf-inconsolata ttf-inconsolata-nerd
 noto-fonts-cjk noto-fonts-emoji
