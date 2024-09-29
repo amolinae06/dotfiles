@@ -1,38 +1,51 @@
 # AMOLINAE'S DOTFILES
 Operating System: Artix Linux (OpenRC)
 
-- Hyprland
-- Waybar
-- Foot
-- Mako
-- Zathura
-- NeoVim (soon)
-- lf (soon)
-- Tofi
-- Fastfetch
+- hyprland
+- waybar
+- foot
+- mako
+- zathura
+- neovim
+- lf
+- tofi
+- fastfetch
 
 #### Required Packages
 CORE PACKAGES
 ```
-hyprland hypridle hyprlock swaybg waybar fastfetch foot neovim opendoas busybox
+hyprland hypridle
+hyprlock swaybg
+waybar fastfetch
+foot neovim
+opendoas busybox
 ```
 
 Audio
 ```
-pipewire wireplumber pipewire-pulse pipewire-alsa pipewire-jack
+pipewire wireplumber
+pipewire-pulse pipewire-alsa
+pipewire-jack
 ```
 
 Other stuff
 ```
-librewolf brightnessctl greetd greetd-tuigreet lf mako mpv zathura polkit-kde-agent gnome-keyring grim slurp tlp
+librewolf brightnessctl greetd
+greetd-tuigreet lf mako
+mpv zathura polkit-kde-agent g
+nome-keyring grim slurp
+tlp kanshi playerctl
 ```
 
 FONTS
 ```
-ttf-inconsolata ttf-inconsolata-nerd noto-fonts-cjk noto-fonts-emoji
+ttf-inconsolata ttf-inconsolata-nerd
+noto-fonts-cjk noto-fonts-emoji
 ```
 
 #### AUR Packages
 ```
-python-pywalfox-librewolf python-pywal16 tofi
+python-pywalfox-librewolf
+python-pywal16
+tofi
 ```
