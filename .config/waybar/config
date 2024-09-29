@@ -1,5 +1,5 @@
 {
-    "height": 24,
+    "height": 26,
     "layer": "top",
     "position": "top",
     "modules-left": [
@@ -13,49 +13,51 @@
 	  "network",
 	  "wireplumber",
 	  "battery",
+    "mpris",
 	  "clock",
 	  "tray" 
     ],
     
    // MODULES \\ 
-    "hyprland/window": {
-        "max-length": 150,
-	"format": "{}",
-	"rewrite": {
-	   "(.*) - Thorium": "Thorium",
-	   "(.*) — Mozilla Firefox": "Firefox",
-	   "(.*) — Librewolf": "Librewolf",
-	   "(.*) - VSCodium": "VSCodium",
-	   "foot": "Terminal"
-	}
+  "hyprland/window": {
+    "max-length": 150,
+	  "format": "{}",
+	  "rewrite": {
+	    "(.*) - Thorium": "Thorium",
+	    "(.*) — Mozilla Firefox": "Firefox",
+	    "(.*) — Librewolf": "Librewolf",
+	    "(.*) - VSCodium": "VSCodium",
+	    "foot": "Terminal"
+	    }
     },
     "hyprland/workspaces": {
          "persistent-workspaces": {
-                "1": [],
-	       "2": [],
-	       "3": [],
-	       "4": []
-	},
-	"sort-by-number": true
+            "1": [],
+	          "2": [],
+	          "3": [],
+	          "4": []
+	        },
+	    "sort-by-number": true
     },
     "custom/makima": {
     	"format": "マキマ",
 	"tooltip": false,
 	"max-length": 24
     },
-    "clock": {
-	"interval": 30,
-	"format": "{:%a %b%e  %R}",
+  "clock": {
+	  "interval": 30,
+	  "format": "{:%a %b %e  %R}",
+	  "tooltip": false
+  },
+  "backlight": {
+	  "device": "intel_backlight",
+	  "format": "{icon}  {percent}%",
+	  "format-icons": ["󰃞", "󰃠"],
 	"tooltip": false
     },
-    "backlight": {
-	"device": "intel_backlight",
-	"format": "{icon}  {percent}%",
-	"format-icons": ["󰃞", "󰃠"],
-	"tooltip": false
-    },
-    "battery": {
-        "format": "{icon}  {capacity}%",
+  "battery": {
+        "bat": "BAT1",
+	"format": "{icon}  {capacity}%",
         "format-charging": "󱐋  {capacity}%",
 	"format-icons": [
 		"", 
@@ -65,12 +67,13 @@
 		""
 		],
 	"states": {
-                "warning": 20,
-		"critical": 10
+		"good": 90,
+    "warning": 15,
+		"critical": 5
 	},
 	"tooltip": false
     },
-    "wireplumber": {
+  "wireplumber": {
 	"format": "{icon}  {volume}%",
 	"format-muted": "  Muted",
 	"format-icons": [
@@ -80,7 +83,7 @@
 	],
 	"tooltip": false
     },
-    "network": {
+  "network": {
 	"interface": "wlan0",
 	"format-wifi": "{icon}  Connected",
 	"format-ethernet": "  Connected",
@@ -91,10 +94,26 @@
             "󰤢",
             "󰤥",
             "󰤨"
-          ],
+        ],
 	"tooltip": false
-    },
-	"tray": {
+  },
+  "mpris": {
+	  "player": "stmps",
+    "max-length": 50,
+    "format": " {player_icon} {dynamic}",
+	  "format-paused": " {status_icon} <i>{dynamic}</i>",
+	  "dynamic-order": ["artist", "title"],
+    "player-icons": {
+		    "default": " ",
+	  },
+	  "status-icons": {
+		  "paused": " "
+	  },
+	  "ignored-players": ["firefox"],
+    "tooltip": false,
+    "interval": 2
+  },
+  "tray": {
 		"icon-size": 18,
 		"spacing": 10,
 		"tooltip": false
