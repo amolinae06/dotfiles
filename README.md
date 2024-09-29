@@ -32,8 +32,8 @@ Other stuff
 ```
 librewolf brightnessctl greetd
 greetd-tuigreet lf mako
-mpv zathura polkit-kde-agent g
-nome-keyring grim slurp
+mpv zathura polkit-kde-agent
+gnome-keyring grim slurp
 tlp kanshi playerctl
 ```
 
