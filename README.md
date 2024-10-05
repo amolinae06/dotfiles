@@ -1,5 +1,5 @@
 # λMOLINAE'S DOTFILES
-## SCREENSHOT
+## SCREENSHOT(S)
 ![scrsht](https://i.tohru.party/OvrtJQvgmsyNziSrWSnoEghFdJIQ.png)
 
 ![scrsht](https://i.tohru.party/WZkZtSXahjvrksIDoDznTgdxkTqXXM.png)
