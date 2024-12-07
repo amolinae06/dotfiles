@@ -1,121 +1,134 @@
 {
-    "height": 26,
     "layer": "top",
     "position": "top",
+	"fixed-center": true,
+	"spacing": 4,
+	"margin-left": 5,
+	"margin-right": 5,
     "modules-left": [
-	  "hyprland/workspaces", 
-	  "custom/makima",
-	  "hyprland/window"
+	  "hyprland/workspaces",
+	  "custom/hostname"
     ],
-    "modules-center": [],
+    "modules-center": [
+		"clock"
+	],
     "modules-right": [
+	  "memory",
+	  "cpu",
 	  "backlight", 
 	  "network",
 	  "wireplumber",
 	  "battery",
-    "mpris",
-	  "clock",
+	  "hyprland/language",
+      "mpris",
 	  "tray" 
     ],
-    
-   // MODULES \\ 
-  "hyprland/window": {
-    "max-length": 150,
-	  "format": "{}",
-	  "rewrite": {
-	    "(.*) - Thorium": "Thorium",
-	    "(.*) — Mozilla Firefox": "Firefox",
-	    "(.*) — Librewolf": "Librewolf",
-	    "(.*) - VSCodium": "VSCodium",
-	    "foot": "Terminal"
-	    }
-    },
+
     "hyprland/workspaces": {
-         "persistent-workspaces": {
-            "1": [],
+		"persistent-workspaces": {
+              "1": [],
 	          "2": [],
 	          "3": [],
 	          "4": []
 	        },
 	    "sort-by-number": true
     },
-    "custom/makima": {
-    	"format": "マキマ",
-	"tooltip": false,
-	"max-length": 24
-    },
-  "clock": {
+	"hyprland/language": {
+    	"format": "󰌌  {}",
+    	"format-en": "EN",
+    	"format-es": "ES",
+    	"keyboard-name": "at-translated-set-2-keyboard"
+	},
+	"clock": {
 	  "interval": 30,
-	  "format": "{:%a %b %e  %R}",
+	  "format": "󱑁  {:%R}",
 	  "tooltip": false
-  },
-  "backlight": {
+  	},
+	"backlight": {
 	  "device": "intel_backlight",
 	  "format": "{icon}  {percent}%",
 	  "format-icons": ["󰃞", "󰃠"],
 	"tooltip": false
     },
-  "battery": {
+	"battery": {
         "bat": "BAT1",
-	"format": "{icon}  {capacity}%",
-        "format-charging": "󱐋  {capacity}%",
-	"format-icons": [
-		"", 
-		"", 
-		"", 
-		"", 
-		""
+		"interval": 30,
+		"format": "{icon}  {capacity}%",
+        "format-charging": "󱐋 {capacity}%",
+		"format-icons": [
+			"", 
+			"", 
+			"", 
+			"", 
+			""
 		],
-	"states": {
-		"good": 90,
-    "warning": 15,
-		"critical": 5
+		"states": {
+			"good": 90,
+    		"warning": 15,
+			"critical": 5
+		},
+		"tooltip": false
+    },
+  	"wireplumber": {
+		"format": "{icon}  {volume}%",
+		"format-muted": "   Muted",
+		"format-icons": [
+			"", 
+			"", 
+			""
+		],
+		"tooltip": false
+    },
+	"memory": {
+    	"interval": 10,
+    	"format": "  {}%",
+		"max-length": 12,
+		"tooltip": false
 	},
-	"tooltip": false
-    },
-  "wireplumber": {
-	"format": "{icon}  {volume}%",
-	"format-muted": "  Muted",
-	"format-icons": [
-		"", 
-		"", 
-		""
-	],
-	"tooltip": false
-    },
-  "network": {
-	"interface": "wlan0",
-	"format-wifi": "{icon}  Connected",
-	"format-ethernet": "  Connected",
-	"format-disconnected": "󰤮  Disconnected",
-	"format-icons": [
-            "󰤯",
-            "󰤟",
-            "󰤢",
-            "󰤥",
-            "󰤨"
-        ],
-	"tooltip": false
-  },
-  "mpris": {
-	  "player": "stmps",
-    "max-length": 50,
-    "format": " {player_icon} {dynamic}",
-	  "format-paused": " {status_icon} <i>{dynamic}</i>",
-	  "dynamic-order": ["artist", "title"],
-    "player-icons": {
-		    "default": " ",
-	  },
-	  "status-icons": {
-		  "paused": " "
-	  },
-	  "ignored-players": ["firefox"],
+	"cpu": {
+    	"interval": 10,
+    	"format": "  {}%",
+    	"max-length": 12,
+		"tooltip": false
+	},
+	"network": {
+		"interface": "wlan0",
+		"format-wifi": "{icon}  Connected",
+		"format-ethernet": "  Connected",
+		"format-disconnected": "󰤮  Disconnected",
+		"format-icons": [
+        	    "󰤯",
+        	    "󰤟",
+        	    "󰤢",
+        	    "󰤥",
+        	    "󰤨"
+        	],
+		"tooltip": false
+  	},
+  	"mpris": {
+		"player": "stmps",
+    	"max-length": 40,
+    	"format": " {player_icon} {dynamic}",
+	  	"format-paused": " {status_icon} <i>{dynamic}</i>",
+	  	"dynamic-order": ["artist", "title"],
+    	"player-icons": {
+			"default": " "
+	  	},
+	  	"status-icons": {
+			"paused": " "
+	  	},
+	"ignored-players": ["firefox"],
     "tooltip": false,
     "interval": 2
-  },
-  "tray": {
+  	},
+  	"tray": {
 		"icon-size": 18,
 		"spacing": 10,
+		"tooltip": false
+	},
+	"custom/hostname": {
+		"format": "  {}",
+		"exec": "cat /etc/hostname",
 		"tooltip": false
 	}
 }
