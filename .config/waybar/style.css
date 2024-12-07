@@ -1,92 +1,95 @@
 @import url('file:///home/amolinae/.cache/wal/colors-waybar.css');
 
 * {
-    font-family: "Inconsolata Nerd Font";
-    font-size: 13px;
-    border-radius: 0;
+	font-family: "Inconsolata Nerd Font";
+	min-height: 0;
+	font-size: 97%;
+	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+	all: initial;
 }
 
-window#waybar { 
-    background: @color1; 
-    color: @foreground;    
+#waybar.empty, 
+#waybar.tiled, 
+#waybar.floating {
+	background-color: transparent;
 }
 
-.modules-left {
-	background-color: @color0;
-	padding: 0px 0px 0px 0px;
+window#waybar,
+window#waybar.empty,
+window#waybar.empty #window {
+	background-color: transparent;
+	padding: 0px;
+	border: 0px;
 }
 
 .modules-right {
 	background-color: @color0;
-	padding: 0px 5px 0px 0px;
+	border-bottom: 2.5px solid @color2;
+	border-left: 2.5px solid @color2;
+	border-right: 2.5px solid @color2;
+	border-radius: 0px 0px 15px 15px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 4px;
+	padding-left: 4px;
 }
 
-#custom-makima {
+.modules-center {
 	background-color: @color0;
-	color: @foreground;
-     	padding: 0px 8px 0px 8px;
+    border-bottom: 2.5px solid @color2;
+	border-left: 2.5px solid @color2;
+	border-right: 2.5px solid @color2;
+	border-radius: 0px 0px 15px 15px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 4px;
+	padding-left: 4px;
 }
 
-#workspaces button {
-	padding: 0px 11px 0px 11px; 
- 	min-width: 1px;
+.modules-left {
+	background-color: @color0;
+	border-bottom: 2.5px solid @color2;
+	border-left: 2.5px solid @color2;
+	border-right: 2.5px solid @color2;
+	border-radius: 0px 0px 15px 15px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 4px;
+	padding-left: 4px;
+}
+
+#backlight, #battery,
+#clock, #cpu,
+#custom-hostname, #language,
+#memory, #mpris,
+#network, #tray,
+#wireplumber, #window,
+#workspaces {
 	color: @foreground;
+	padding-top: 2px;
+	padding-bottom: 4px;
+	padding-right: 6px;
+	padding-left: 6px;
 	transition: none;
 }
 
-#workspaces button.active { 
-	padding: 0px 11px 0px 11px; 
-	background-color: @color1;
+#workspaces button {
 	color: @foreground;
-	font-weight: bold;
+	margin-right: 0.5px;
+	margin-left: 0.5px;
+	padding: 0px 4px 0px 4px;
+}
+
+#workspaces button.active {
+	color: @foreground;
+	border-radius: 15%;
+	background-color: @color2;
+	padding: 0px 4px 0px 4px;
 }
 
 #workspaces button:hover {
-	color: @color1;
-	background-color: @color0;
-	border: 1.5px solid @color1;
-}
-
-#window {
-	 color: @foreground;
-	 background-color: @color1;
-         padding: 0px 10px 0px 10px;
-}
-
-window#waybar.empty #window {
-	background-color: transparent;
-	color: transparent;
-}
-
-window#waybar.empty {
-	background-color: @color0;
-}
-
-#network,
-#backlight, 
-#wireplumber,
-#battery {
-    padding: 0px 15px 0px 15px;
-}
-
-#mpris {
-    /*background-color: @color1;*/
-    padding: 0px 10px 0px 10px;
-}
-
-#clock {
-	margin: 0px 15px 0px 15px;
-}
-
-#tray{
-   padding: 0px 8px 0px 5px;
-   margin: 0px 5px 0px 5px;
-}
-
-#battery.critical {
-   color: @color1;
-}
-
-#network.disconnected {
-    color: @color1;
+	color: @foreground;
+	background-color: @color1;
+	border-radius: 15%;
+	transition: none;
 }
