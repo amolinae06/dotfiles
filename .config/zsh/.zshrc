@@ -31,7 +31,7 @@ _comp_options+=(globdots)               # Include hidden files.
 fastfetch
 
 # Aliases
-alias reboot='loginctl reboot'
+alias ssh='dbclient'
 alias sudo='doas'
 alias neofetch='fastfetch'
 alias yay='paru'
