@@ -13,18 +13,16 @@
 - mako
 - zathura
 - neovim
-- lf
 - tofi
 - fastfetch
 
 ## Required Packages
 ##### CORE PACKAGES
 ```
-hyprland hypridle
-hyprlock swaybg
+hyprland swayidle
+swaylock swaybg
 waybar fastfetch
 foot neovim
-opendoas busybox
 ```
 
 ##### Audio
@@ -37,7 +35,7 @@ pipewire-jack
 ##### Other stuff
 ```
 librewolf brightnessctl greetd
-greetd-tuigreet lf mako
+greetd-tuigreet pcmanfm mako
 mpv zathura polkit-kde-agent
 gnome-keyring grim slurp
 tlp kanshi playerctl
