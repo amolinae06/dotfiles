@@ -29,7 +29,7 @@ hyprland swayidle
 swaylock swaybg
 waybar fastfetch
 foot neovim
-tofi
+tofi py3-pywal
 ```
 
 ##### Audio
