@@ -23,6 +23,7 @@ hyprland swayidle
 swaylock swaybg
 waybar fastfetch
 foot neovim
+tofi
 ```
 
 ##### Audio
@@ -43,13 +44,7 @@ tlp kanshi playerctl
 
 ##### FONTS
 ```
-ttf-inconsolata ttf-inconsolata-nerd
-noto-fonts-cjk noto-fonts-emoji
-```
-
-#### AUR Packages
-```
-python-pywalfox-librewolf
-python-pywal16
-tofi
+font-inconsolata-nerd
+font-noto-cjk
+font-noto-emoji
 ```

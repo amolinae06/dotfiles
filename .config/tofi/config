@@ -1,4 +1,4 @@
-include = /home/amolinae/.cache/wal/tofi-colors
+include = /home/amolinae/.cache/wal/colors-tofi
 
 font = "Inconsolata"
 font-size = 11
@@ -8,11 +8,10 @@ prompt-text = ""
 anchor = center
 width = 20%
 height = 20%
-alpha = 10
 horizontal = false
 outline-width = 0
 border-width = 2
-corner-radius = 0
+corner-radius = 8
 min-input-width = 120
 result-spacing = 15
 padding-top = 8
