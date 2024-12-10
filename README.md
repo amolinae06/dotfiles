@@ -12,16 +12,6 @@ This repository hosts my personal dotfiles.
 
 ![scrsht](https://tohru.party/vpzOu6ZD42arUeo617J9iUety48h.png)
 
-## Featured Software
-- hyprland
-- waybar
-- foot
-- mako
-- zathura
-- neovim
-- tofi
-- fastfetch
-
 ## Required Packages
 ##### CORE PACKAGES
 ```
