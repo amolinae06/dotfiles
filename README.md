@@ -1,10 +1,14 @@
 # λMOLINAE'S DOTFILES
-## SCREENSHOT(S)
-![scrsht](https://i.tohru.party/OvrtJQvgmsyNziSrWSnoEghFdJIQ.png)
+## SCREENSHOTS
+![scrsht](https://tohru.party/S4xdOkmszZhP4vUE8xSOIlvr7iqO.png)
 
-![scrsht](https://i.tohru.party/WZkZtSXahjvrksIDoDznTgdxkTqXXM.png)
+![scrsht](https://tohru.party/HkMYRDAomDjCQDl2U9Kb1QmZvV5L.png)
 
-![scrsht](https://i.tohru.party/hInSfxGEJJJWRuIOZMjpDDMMfdLsH.png)
+![scrsht](https://tohru.party/krdCJrZLw3FQP9AhRSJNzCqTTbyc.png)
+
+![scrsht](https://tohru.party/EqHFn24OVFOmhutiAUorpKMVbwL8.png)
+
+![scrsht](https://tohru.party/vpzOu6ZD42arUeo617J9iUety48h.png)
 
 ## Featured Software
 - hyprland
