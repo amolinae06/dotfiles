@@ -1,0 +1,7 @@
+image="$HOME/Pictures/Wallpapers/pixel.png"
+clock
+indicator
+ignore-empty-password
+hide-keyboard-layout
+disable-caps-lock-text
+effect-blur=12x8
