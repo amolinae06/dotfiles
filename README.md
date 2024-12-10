@@ -1,4 +1,6 @@
 # λMOLINAE'S DOTFILES
+This repository hosts my personal dotfiles.
+
 ## SCREENSHOTS
 ![scrsht](https://tohru.party/S4xdOkmszZhP4vUE8xSOIlvr7iqO.png)
 
@@ -44,6 +46,7 @@ greetd-tuigreet pcmanfm mako
 mpv zathura polkit-kde-agent
 gnome-keyring grim slurp
 tlp kanshi playerctl
+papirus-icon-theme adwaita-icon-theme
 ```
 
 ##### FONTS
