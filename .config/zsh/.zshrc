@@ -2,6 +2,7 @@
 case $(tty) in /dev/tty[0-9]*)
     source .cache/wal/colors-tty.sh
 esac
+
 autoload -U colors && colors    # Load colors
 PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[red]%}@%{$fg[yellow]%}%M %{$fg[yellow]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
 setopt autocd           # Automatically cd into typed directory.
@@ -27,8 +28,10 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)               # Include hidden files.
 
-# Commands
-fastfetch
+# Completion files: Use XDG dirs
+[ -d "$XDG_CACHE_HOME"/zsh ] || mkdir -p "$XDG_CACHE_HOME"/zsh
+zstyle ':completion:*' cache-path "$XDG_CACHE_HOME"/zsh/zcompcache
+compinit -d "$XDG_CACHE_HOME"/zsh/zcompdump-$ZSH_VERSION
 
 # Aliases
 alias ssh='dbclient'
@@ -40,6 +43,10 @@ alias ls='ls -lah'
 alias codium='codium --ozone-platform=wayland'
 alias cmatrix='cmatrix -bcm -u 7'
 alias stmps='stmps -mpris'
+alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
+
+# Commands
+fastfetch
 
 # Load syntax highlighting; should be last.
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
