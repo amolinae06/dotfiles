@@ -36,7 +36,8 @@ greetd-tuigreet pcmanfm mako
 mpv zathura polkit-kde-agent
 gnome-keyring grim slurp
 tlp kanshi playerctl
-papirus-icon-theme adwaita-icon-theme
+papirus-icon-theme adwaita-icon-theme openssh
+zsh zsh-completions xdg-user-dirs
 ```
 
 ##### FONTS
