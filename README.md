@@ -38,6 +38,7 @@ gnome-keyring grim slurp
 tlp kanshi playerctl
 papirus-icon-theme adwaita-icon-theme openssh
 zsh zsh-completions xdg-user-dirs
+zathura-pdf-poppler openssh sshfs
 ```
 
 ##### FONTS
